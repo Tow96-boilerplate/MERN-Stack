@@ -1,0 +1,24 @@
+{
+  "name": "merntemplate",
+  "version": "0.2.0",
+  "description": "FullStack scouting app",
+
+  "scripts": {
+    "backend-dev": "cd Backend && npm run dev",
+    "web-start": "cd Client/Web && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tow96/MERN-Stack.git"
+  },
+  "keywords": [
+    "frc",
+    "scouting"
+  ],
+  "author": "Jose Tow Echenique",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Tow96/MERN-Stack/issues"
+  },
+  "homepage": "https://github.com/Tow96/MERN-Stack#readme"
+}
