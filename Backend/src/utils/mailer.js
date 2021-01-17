@@ -13,7 +13,7 @@ const Mailgen = require('mailgen');
 const logger = require('./logger');
 const PasswordToken = require('../database/models/passwordResetToken');
 
-const { NAME, EMAIL, EMAIL_PASSWORD, EMAIL_MAIN_URL } = process.env;
+const { NAME, EMAIL, EMAIL_PASSWORD, FRONTEND } = process.env;
 
 const transporter = nodemailer.createTransport({
   service: process.env.EMAIL_PROVIDER,
@@ -28,7 +28,7 @@ const mailGenerator = new Mailgen({
   theme: 'default',
   product: {
     name: NAME,
-    link: EMAIL_MAIN_URL,
+    link: FRONTEND,
     //TODO: Create and add logo
     //logo: 'https://avatars3.githubusercontent.com/u/11511711?s=460&u=9f55fbd68f05113f749132b9ca966e34b6337cf0&v=4'
   }
