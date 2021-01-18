@@ -20,10 +20,12 @@ const refreshTokenReducer = (state = initialState, action) => {
     case 'LOGIN':
       // If no payload, return;
       if (!action.payload.refToken) return state;
+      
+      // Stores the token in the session storage
+      sessionStorage.setItem('refToken', action.payload.refToken);
 
       // If keepSession is enabled Stores the token in the localStorage
       if (action.payload.keepSession) localStorage.setItem('refToken', action.payload.refToken);
-      sessionStorage.setItem('refToken', action.payload.refToken);
 
       return {
         ...state,

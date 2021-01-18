@@ -16,7 +16,7 @@ import store from './stores/store';
 import { login } from './stores/actions';
 
 // Logs in if possible
-if (localStorage.getItem('refToken')) {
+if (sessionStorage.getItem('refToken')) {
   async function tryToLogin() {
     const AuthService = new authService();
     await AuthService.refresh({
