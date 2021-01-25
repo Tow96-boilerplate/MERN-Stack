@@ -22,6 +22,10 @@ export const useForm = (callback, initialState = {}) => {
   const [values, setValues] = useState(initialState);
   const [loading, setLoading] = useState(false);
 
+  const clear = () => {
+    setValues(initialState)
+  }
+
   const onChange = (_, data) => {
     switch (data.type) {
       case 'checkbox':
@@ -42,11 +46,12 @@ export const useForm = (callback, initialState = {}) => {
   };
 
   return {
+    clear,
+    loading,
     onChange,
     onSubmit,
-    values,
-    loading,
     setLoading,
+    values,
   };
 
 }
