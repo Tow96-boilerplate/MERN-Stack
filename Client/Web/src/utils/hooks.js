@@ -81,10 +81,16 @@ export const useList = (initialState = []) => {
     setValues(nuArr);
   }
 
+  const remove = (object) => {
+    const nuArr = values.filter(item => item.id !== object.id)
+    setValues(nuArr);
+  }
+
   return {
     append,
     appendMulti,
     loading,
+    remove,
     setLoading,
     values,
   };
